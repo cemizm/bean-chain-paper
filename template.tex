@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a template file for the LaTeX package SVJour2 for the
+% Springer journal "Machine Vision and Applications".
+%
+%                                    Springer Heidelberg 2004/11/04
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+\documentclass[twocolumn,fleqn,runningheads]{template_files/svjour2}
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{template_files/biograph}        % to allow for author biography at the end
+
+\journalname{Internet of Things}
+%
+\begin{document}
+
+\title{A Blockchain-Based Micro-payment and Management Architecture for Vending Machines}
+%\subtitle{An overview}
+
+\author{Cem Basoglu}
+
+\institute{Cem Basoglu \at
+           Univ. of Appl. Sci., Minden, Germany \\
+		   \email{cem.basoglu@fh-bielefeld.de}
+}
+
+\date{Submitted: 7/15/2018}
+% The correct dates will be entered by the editor
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Include up to five keywords.
+\keywords{cryptocurrency \and distributed ledger \and More}
+\end{abstract}
+
+\input{1_introduction.tex}
+\input{2_state_of_art.tex}
+\input{3_the_approach.tex}
+
+% BibTeX users please use
+\bibliographystyle{template_files/spmpsci.bst}
+\bibliography{0_bibliography}   % name your BibTeX data base
+
+% Einige Beispiele die später entfernt werden können
+%\input{template_files/example.tex}
+
+\end{document}
+% end of file template.tex

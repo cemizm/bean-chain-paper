@@ -1,0 +1,56 @@
+
+\clearpage
+
+\section{Section title}
+\label{sec:1}
+Citations \cite{8338177} and \cite{8306880} and \cite{8338177}.
+\subsection{Subsection title}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+\section{Conclusion}
+Conclusion is important...
+
+% For one-column wide figures use
+\begin{figure}
+\centering
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics{template_files/example.eps}
+% figure caption is below the figure
+\caption{Please write your figure caption here}
+\label{fig:1}       % Give a unique label
+\end{figure}
+%
+% For two-column wide figures use
+\begin{figure*}
+\centering
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics[width=0.75\textwidth]{template_files/example.eps}
+% figure caption is below the figure
+\caption{Please write your figure caption here}
+\label{fig:2}       % Give a unique label
+\end{figure*}
+%
+% For tables use
+\begin{table}[t]
+% table caption is above the table
+\caption{Please write your table caption here}
+\centering
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{lll}
+\hline\noalign{\smallskip}
+first & second & third  \\[3pt]
+\tableheadseprule\noalign{\smallskip}
+number & number & number \\
+number & number & number \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}

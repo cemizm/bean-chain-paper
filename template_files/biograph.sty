@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%             This is biograph.sty, version 3
+%
+% for biography with embedded (E)PS image. Package
+% to be used with the standardized journal documentclass
+% SVJour2 of Springer
+%
+%
+%
+% Usage: \begin{authorbiography}{<file name for \includegraphics>}
+%        {Author's name}
+%        Text of biography
+%        \end{authorbiography}
+%
+% Note: image is scaled to 5.3cm times 3.8cm,
+%       so watch those proportions;
+%       requires the graphics package
+%
+% History:
+% Initial release                           08.07.04
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\NeedsTeXFormat{LaTeX2e}[1996/12/01]
+\ProvidesPackage{biograph}[2004/07/08 v. 3.0]
+\RequirePackage{graphics}
+%
+\def\@uthorbiography#1#2{%
+\begingroup
+\endgraf
+\skip0=0pt plus2cm
+\advance\skip0 by2\bigskipamount\relax
+\vskip\skip0
+\small
+\setbox0=\vbox\bgroup%\def\par{\hfil\break}%
+               \sloppy
+               \noindent
+               \hangindent=120pt
+               \hangafter=-17\relax
+               \@tempdima=5.3cm
+               \advance\@tempdima by-\ht\strutbox
+               \smash{\lower\@tempdima
+                      \llap{\includegraphics[height=5.3truecm,%
+                                               width=3.8truecm]{#1}%
+                                        \kern11pt}}%
+               \vrule height\topskip width0pt
+               \if!#2!\else{\textbf{\ignorespaces#2}}\fi
+               \ignorespaces}
+%
+\def\authorbiography#1#2{%
+\if!#1!\def\endauthorbiography{\par
+\addvspace{1cm}}\endauthorbiography
+\small\noindent
+\if!#2!\else{\textbf{\ignorespaces#2}}\fi
+       \ignorespaces
+\else
+\@uthorbiography{#1}{#2}\fi}
+%
+\def\endauthorbiography{\egroup
+\dimen0=\ht0\advance\dimen0 by\dp0
+\ifdim\dimen0<5cm
+   \vtop to5cm{\box0\vss}
+\else
+   {\splittopskip=0pt
+   \splitmaxdepth=\maxdepth
+   \vbadness=10000
+   \setbox1=\vsplit0 to 56mm
+   \vtop{\box1}%
+%  \vskip-\prevdepth \vskip-4pt
+   \par
+   \vskip0pt
+   \unvbox0
+   \endgraf}
+\fi
+\endgroup}
+%
+\endinput
+% end of file biograph.sty
