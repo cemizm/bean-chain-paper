@@ -17,34 +17,47 @@
 %
 \usepackage{graphicx}
 \usepackage{template_files/biograph}        % to allow for author biography at the end
+\usepackage{booktabs}
+\usepackage{tabu} % for full-width table
+\usepackage{hyperref} % for links to references
 
 \journalname{Internet of Things}
 %
 \begin{document}
 
-\title{A Blockchain-Based Micro-payment and Management Architecture for Vending Machines}
+\title{A Blockchain-based payment and management architecture for vending machines}
 %\subtitle{An overview}
 
-\author{Cem Basoglu}
+\author{Cem Basoglu\textsuperscript{1}, Kevin Schima\textsuperscript{2}}
 
 \institute{Cem Basoglu \at
            Univ. of Appl. Sci., Minden, Germany \\
-		   \email{cem.basoglu@fh-bielefeld.de}
+		   \email{cem.basoglu@fh-bielefeld.de} \and
+		   Kevin Schima \at
+           Univ. of Appl. Sci., Minden, Germany \\
+		   \email{kevin.schima@fh-bielefeld.de}
 }
 
-\date{Submitted: 7/15/2018}
+\date{Submitted: 7/20/2018}
 % The correct dates will be entered by the editor
 
 \maketitle
 
 \begin{abstract}
-Insert your abstract here. Include up to five keywords.
-\keywords{cryptocurrency \and distributed ledger \and More}
+In context of rising pay-per-use business models, we envision a triangular profit-sharing business relationship between a vending machine manufacturer, contractors responsible for machine maintenance and location providers for machine installation. Besides, we facilitate the future adoption of this architecture by developing a system which also provides benefits for vending machine customers. We identify the lack of trust as the main problem in a centralized profit-sharing system. 
+Centralized systems do not provide a trusted environment for all participants where manipulation of sales figures is impossible. 
+In this paper, we propose an blockchain-based architecture for management and payment processing of this presented system. We compare the properties of different Distributed Ledger Technologies to implement a proof-of-concept by using a coffee machine.
+\keywords{Distributed Ledger \and Blockchain \and Internet of Things \and Smart Contracts \and Vending machines}
 \end{abstract}
 
 \input{1_introduction.tex}
-\input{2_state_of_art.tex}
-\input{3_the_approach.tex}
+\input{2_background.tex}
+\input{3_related_work.tex}
+\input{4_method.tex}
+\input{5_experimental_results.tex}
+\input{6_conclusion.tex}
+
+% \clearpage
 
 % BibTeX users please use
 \bibliographystyle{template_files/spmpsci.bst}
